@@ -23,7 +23,7 @@ export const Login = () => {
       <input {...register("password", { required: true, minLength: 6 })} />
       {errors.password && <span>This field is required</span>}
       <br />
-      <input type="submit" />
+      <button type="submit">Submit</button>
     </form>
   )
 

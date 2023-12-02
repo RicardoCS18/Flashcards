@@ -1,17 +1,18 @@
-import { FC, useState } from 'react';
+import { useState } from 'react';
 import './tab.css'
 import { Login } from '../Login';
+import { Register } from "../Register"
 
-interface TabProps {
-  children: { title: string }[]; // Define children as an array of objects with a 'title' string property
-}
 
-const Tab: FC<TabProps> = ({ children }) => {
+
+const Tab = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   const toggleTab = (index: number) => {
     setActiveTab(index);
   };
+
+  const children = [{ title: "Log In" }, { title: "Register" }]
 
   return (
     <div className='tabs'>
@@ -27,7 +28,8 @@ const Tab: FC<TabProps> = ({ children }) => {
 
         ))}
         <div className='tab'>
-          <Login />
+          {activeTab === 0 && <Login />}
+          {activeTab === 1 && <Register />}
         </div>
       </div>
     </div>
