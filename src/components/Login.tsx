@@ -2,7 +2,7 @@
 import { useForm, SubmitHandler } from "react-hook-form"
 
 type Inputs = {
-  userName: string
+  userEmail: string
   password: string
 }
 
@@ -15,12 +15,12 @@ export const Login = () => {
 
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)} className="formContainer">
 
-      <input  {...register("userName", { required: true, minLength: 6 })} />
-      {errors.userName && <span>This field is required</span>}
+      <input  {...register("userEmail", { required: true, minLength: 6 })} placeholder="Email" className="input" required />
+      {errors.userEmail && <span>This field is required</span>}
       <br />
-      <input {...register("password", { required: true, minLength: 6 })} />
+      <input {...register("password", { required: true, minLength: 6 })} placeholder="Password" className="input" required />
       {errors.password && <span>This field is required</span>}
       <br />
       <button type="submit">Submit</button>
