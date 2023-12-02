@@ -1,0 +1,36 @@
+button {
+  padding: 1rem 2rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #9fa7b3;
+  text-align: center;
+  cursor: pointer;
+}
+
+button:hover {
+  color: rgb(49, 48, 48);
+  opacity: 0.7;
+  transition: 0.15s;
+}
+
+
+.tab {
+
+  position: fixed;
+}
+
+
+.active {
+  background-color: rgb(107, 111, 158);
+  color: #edf0f5;
+}
+
+.active:hover {
+  opacity: 1;
+  color: #cbced3;
+}
+
+.inactive {
+  background-color: rgb(253, 253, 253);
+}
