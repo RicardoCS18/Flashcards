@@ -22,7 +22,7 @@ export const Login = () => {
       <br />
       <input {...register("password", { required: true, minLength: 6 })} placeholder="Password" className="input" required />
       {errors.password && <span>This field is required</span>}
-      <br />
+      <h5>Forgot your password?</h5>
       <button type="submit">Submit</button>
     </form>
   )

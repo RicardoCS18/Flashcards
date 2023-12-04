@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './tab.css'
-import { Login } from '../Login';
-import { Register } from "../Register"
+import { Login } from './Login';
+import { Register } from "./Register"
 
 
 
