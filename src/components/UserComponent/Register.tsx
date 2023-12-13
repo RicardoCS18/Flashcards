@@ -1,10 +1,8 @@
 import * as z from "zod"
 import {
   Form
-  //, FormControl, FormField, FormItem, FormLabel, FormMessage
+  , FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage
 } from '../ui/form'
-// import { Input } from '../ui/input'
-// import { Button } from '../ui/button'
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 
@@ -27,7 +25,20 @@ const form = useForm<z.infer<typeof formSchema>>({
 function Register() {
   return (
     <Form {...form}>
-
+      <FormField
+        control={form.control}
+        name="userEmail"
+        render={() => (
+          <FormItem>
+            <FormLabel />
+            <FormControl>
+              F
+            </FormControl>
+            <FormDescription />
+            <FormMessage />
+          </FormItem>
+        )}
+      />
     </Form>
   )
 }
